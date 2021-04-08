@@ -1,0 +1,254 @@
+:root {
+    --primary: #A770EF;
+    --light: #fff;
+    --grey: #49454593;
+    --secondary: #FDB99B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: var(--grey);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+h2 {
+    color: var(--secondary);
+    font-weight: 800;
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+h3 {
+    color: var(--grey);
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+p {
+    color: var(--grey);
+    font-weight: 500;
+}
+
+
+main {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    background: #A770EF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerAvatar {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.containerAvatar img {
+    width: 50%;
+}
+
+.glass {
+    margin: 1rem;
+    background: white;
+    width: 70%;
+    min-height: 80vh;
+    background: linear-gradient(
+    to right bottom, 
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.circle1,
+.circle2 {
+    background: white;
+    background: linear-gradient(
+    to right bottom, 
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+    );
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1 {
+    top: 7%;
+    right: 7%;
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 10%;
+}
+
+/* Dashboard */
+
+.dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+        );
+    border-radius: 2rem;
+}
+
+/* links del menú */
+
+.link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    padding: 1.5rem;
+    vertical-align: center;
+}
+
+a:link {
+    color: var(--grey);
+}
+
+a:focus {
+    border-radius: 3rem;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+a:hover {
+    border-radius: 3rem;
+    background: var(--light);
+}
+
+a:active {
+    box-shadow: inset 0 0 15px 10px #cf8bf31f;
+    color: var(--primary);
+}
+
+
+.link ion-icon {
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+button {
+    background: #A770EF;
+    background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);
+    background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    box-shadow: 15px 10px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #A770EF;
+}
+
+button:focus {
+    transition: 0.6s ease width;
+}
+
+button:active {
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.6s ease width;
+}
+
+
+
+/* GAMES */
+
+.games {
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 1.5rem;
+}
+
+.card {
+    display: flex;
+    background: linear-gradient(to left top, 
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+    );
+    border-radius: 1rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+    justify-content: space-between;
+}
+
+.progress {
+    background: linear-gradient(to right top, #FDB99B, #CF8BF3);
+    width: 100%;
+    height: 25%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress2 {
+    background: linear-gradient(to right top, #FDB99B, #CF8BF3);
+    width: 100%;
+    height: 25%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(236, 236, 236);
+    position: absolute;
+    left: 60%;
+  }
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.percentage {
+    font-weight: 800;
+    color: linear-gradient(to right top, #FDB99B, #CF8BF3);
+    display: flex;
+    text-align: right;
+}
+
